@@ -42,7 +42,9 @@ public class PersonService implements Service<Person, Integer> {
     @Override
     public void deleteById(Integer id) throws Exception {
         try (PersonRepository personRepository = new PersonRepository()) {
-            if (personRepository.findById(id) != null) {
+            if (personRepository.findById(id) == null) {
+                throw new PersonNotFoundByIdException(id);
+            } else {
                 personRepository.deleteById(id);
             }
         }
