@@ -1,1 +1,1 @@
-* Person (int id, String firstName, String lastName, LocalDate birthDate, PesonRole role, boolean active)
+* Person (int id, String firstName, String lastName, LocalDate birthDate, PersonRole role, boolean active)
