@@ -89,7 +89,7 @@ public class PersonRepository implements Repository<Person, Integer>, AutoClosea
         List<Person> personList = new ArrayList<>();
 
         preparedStatement = connection.prepareStatement(
-                "SELECT * FROM PERSONS WHERE FIRST_NAME LIKE ? AND LAST_NAME LIKE ?"
+                "SELECT * FROM PERSONS WHERE FIRST_NAME LIKE ? AND LAST_NAME LIKE ? ORDER BY LAST_NAME, FIRST_NAME"
         );
         preparedStatement.setString(1, firstName + "%");
         preparedStatement.setString(2, lastName + "%");
