@@ -102,7 +102,6 @@ public class PersonRepository implements Repository<Person, Integer>, AutoClosea
 
     @Override
     public void close() throws Exception {
-        preparedStatement.close();
         connection.close();
     }
 }
