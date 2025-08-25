@@ -72,11 +72,12 @@ public class PersonService implements Service<Person, Integer> {
     public List<Person> findByFirstNameAndLastName(String firstName, String lastName) throws Exception {
         try (PersonRepository personRepository = new PersonRepository()) {
             List<Person> personList = personRepository.findByFirstNameAndLastName(firstName, lastName);
-            if (personList.isEmpty()) {
-                throw new PersonNotFoundByFirstNameAndLastNameException(firstName, lastName);
-            } else {
-                return personList;
-            }
+            return personList;
+//            if (personList.isEmpty()) {
+//                throw new PersonNotFoundByFirstNameAndLastNameException(firstName, lastName);
+//            } else {
+//                return personList;
+//            }
         }
     }
 }
