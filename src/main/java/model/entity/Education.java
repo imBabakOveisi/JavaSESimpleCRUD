@@ -5,6 +5,7 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 import lombok.experimental.SuperBuilder;
+import model.entity.enums.EducationGrade;
 
 import java.time.LocalDate;
 
